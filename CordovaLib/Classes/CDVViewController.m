@@ -123,7 +123,7 @@
 }
 
 CGFloat gAccessoryBarHeight = 0.0;
-- (void)hideKeyboardFormAccessoryBar:(NSNotification*)notif
+- (void)hideKeyboardFormAccessoryBarStart:(NSNotification*)notif
 {
     NSArray* windows = [[UIApplication sharedApplication] windows];
 
@@ -156,6 +156,12 @@ CGFloat gAccessoryBarHeight = 0.0;
             }
         }
     }
+}
+
+- (void)hideKeyboardFormAccessoryBarEnd:(NSNotification*)notif
+{
+    // restore the scrollview frame
+    self.webView.scrollView.frame = self.webView.frame;
 }
 
 - (void)keyboardWillShow:(NSNotification*)notif
@@ -348,7 +354,13 @@ CGFloat gAccessoryBarHeight = 0.0;
                                                            queue:[NSOperationQueue mainQueue]
                                                       usingBlock:^(NSNotification* notification) {
             // we can't hide it here because the accessory bar hasn't been created yet, so we delay on the queue
-            [weakSelf performSelector:@selector(hideKeyboardFormAccessoryBar:) withObject:notification afterDelay:0];
+            [weakSelf performSelector:@selector(hideKeyboardFormAccessoryBarStart:) withObject:notification afterDelay:0];
+        }];
+        [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillHideNotification
+                                                          object:nil
+                                                           queue:[NSOperationQueue mainQueue]
+                                                      usingBlock:^(NSNotification* notification) {
+                                                          [weakSelf hideKeyboardFormAccessoryBarEnd:notification];
         }];
     }
 
