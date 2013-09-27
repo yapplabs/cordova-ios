@@ -17,26 +17,24 @@
  under the License.
  */
 
-#import "CDVAvailability.h"
-
 #import "CDVPlugin.h"
-#import "CDVViewController.h"
-#import "CDVCommandDelegate.h"
-#import "CDVURLProtocol.h"
-#import "CDVInvokedUrlCommand.h"
 
-#import "CDVDebug.h"
-#import "CDVPluginResult.h"
-#import "CDVWhitelist.h"
-#import "CDVLocalStorage.h"
-#import "CDVScreenOrientationDelegate.h"
-#import "CDVTimer.h"
-#import "CDVKeyboard.h"
+@interface CDVKeyboard : CDVPlugin {
+    @protected
+    BOOL _shrinkView;
+    @protected
+    BOOL _hideFormAccessoryBar;
+    @protected
+    id _keyboardShowObserver, _keyboardHideObserver;
+    @protected
+    id _hideFormAccessoryBarKeyboardShowObserver, _hideFormAccessoryBarKeyboardHideObserver;
+    @protected
+    id _shrinkViewKeyboardShowObserver, _shrinkViewKeyboardHideObserver;
+}
 
-#import "NSArray+Comparisons.h"
-#import "NSData+Base64.h"
-#import "NSDictionary+Extensions.h"
-#import "NSMutableArray+QueueAdditions.h"
-#import "UIDevice+Extensions.h"
+@property (readwrite, assign) BOOL shrinkView;
+@property (readwrite, assign) BOOL disableScrollingInShrinkView;
+@property (readonly, assign)  BOOL hideFormAccessoryBar;
+@property (readonly, assign)  BOOL keyboardIsVisible;
 
-#import "CDVJSON.h"
+@end

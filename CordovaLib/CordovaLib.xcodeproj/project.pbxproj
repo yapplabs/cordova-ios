@@ -32,6 +32,8 @@
 		30F5EBAB14CA26E700987760 /* CDVCommandDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F5EBA914CA26E700987760 /* CDVCommandDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E14B5A81705050A0032169E /* CDVTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E14B5A61705050A0032169E /* CDVTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E14B5A91705050A0032169E /* CDVTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E14B5A71705050A0032169E /* CDVTimer.m */; };
+		7E9266F717F4EB2800FEB3FC /* CDVKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E9266F517F4EB2800FEB3FC /* CDVKeyboard.h */; };
+		7E9266F817F4EB2800FEB3FC /* CDVKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9266F617F4EB2800FEB3FC /* CDVKeyboard.m */; };
 		8852C43A14B65FD800F0E735 /* CDVViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8852C43614B65FD800F0E735 /* CDVViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8852C43C14B65FD800F0E735 /* CDVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8852C43714B65FD800F0E735 /* CDVViewController.m */; };
 		8887FD681090FBE7009987E8 /* NSDictionary+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8887FD281090FBE7009987E8 /* NSDictionary+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +95,8 @@
 		68A32D7414103017006B237C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		7E14B5A61705050A0032169E /* CDVTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVTimer.h; path = Classes/CDVTimer.h; sourceTree = "<group>"; };
 		7E14B5A71705050A0032169E /* CDVTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVTimer.m; path = Classes/CDVTimer.m; sourceTree = "<group>"; };
+		7E9266F517F4EB2800FEB3FC /* CDVKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVKeyboard.h; path = Classes/CDVKeyboard.h; sourceTree = "<group>"; };
+		7E9266F617F4EB2800FEB3FC /* CDVKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVKeyboard.m; path = Classes/CDVKeyboard.m; sourceTree = "<group>"; };
 		8220B5C316D5427E00EC3921 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8852C43614B65FD800F0E735 /* CDVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVViewController.h; path = Classes/CDVViewController.h; sourceTree = "<group>"; };
 		8852C43714B65FD800F0E735 /* CDVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVViewController.m; path = Classes/CDVViewController.m; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				30F3930A169F839700B22307 /* CDVJSON.m */,
 				EB96673916A8970900D86CDF /* CDVUserAgentUtil.h */,
 				EB96673A16A8970900D86CDF /* CDVUserAgentUtil.m */,
+				7E9266F517F4EB2800FEB3FC /* CDVKeyboard.h */,
+				7E9266F617F4EB2800FEB3FC /* CDVKeyboard.m */,
 			);
 			name = Commands;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				30392E4E14F4FCAB00B9E0B8 /* CDVAvailability.h in Headers */,
 				3034979C1513D56A0090E688 /* CDVLocalStorage.h in Headers */,
 				3062D120151D0EDB000D9128 /* UIDevice+Extensions.h in Headers */,
+				7E9266F717F4EB2800FEB3FC /* CDVKeyboard.h in Headers */,
 				EBA3557315ABD38C00F4DE24 /* NSArray+Comparisons.h in Headers */,
 				EB3B3547161CB44D003DBE7D /* CDVCommandQueue.h in Headers */,
 				EB3B357C161F2A45003DBE7D /* CDVCommandDelegateImpl.h in Headers */,
@@ -356,6 +363,7 @@
 				EB3B357D161F2A45003DBE7D /* CDVCommandDelegateImpl.m in Sources */,
 				F858FBC7166009A8007DA594 /* CDVConfigParser.m in Sources */,
 				30F3930C169F839700B22307 /* CDVJSON.m in Sources */,
+				7E9266F817F4EB2800FEB3FC /* CDVKeyboard.m in Sources */,
 				EB96673C16A8970A00D86CDF /* CDVUserAgentUtil.m in Sources */,
 				EBFF4DBC16D3FE2E008F452B /* CDVWebViewDelegate.m in Sources */,
 				7E14B5A91705050A0032169E /* CDVTimer.m in Sources */,
